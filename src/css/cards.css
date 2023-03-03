@@ -1,0 +1,110 @@
+.article-categories {
+    background: none;
+}
+
+.categories-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 15px;
+}
+
+.item-bottom {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    align-items: center;
+    max-height: 10vh;
+    color: var(--bs-white);
+    border-radius: 0 0 25px 25px;
+    text-decoration: none;
+}
+
+.item-bottom:hover {
+    color: var(--bs-white);
+}
+
+@media (max-device-width: 1024px) {
+    .categories-cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 10px;
+    }
+}
+
+@media (max-device-width: 768px) {
+    .categories-cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 8px;
+    }
+}
+
+@media (max-device-width: 520px) {
+    .categories-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        margin-bottom: 100px;
+    }
+}
+
+.categories-item {
+    min-height: 350px;
+    margin-top: 15px;
+}
+
+@media (max-device-width: 1024px) {
+    .categories-item {
+        min-height: 250px;
+    }
+}
+
+@media (max-device-width: 768px) {
+    .categories-item {
+        min-height: 250px;
+    }
+}
+
+@media (max-device-width: 520px) {
+    .categories-item {
+        min-height: 200px;
+    }
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 15%;
+    font-size: 0.9em;
+}
+
+.item-counter {
+    color: var(--bs-yellow);
+}
+
+.item-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 85%;
+    border-radius: 25px;
+    transition: 0.5s;
+    filter: grayscale(100%);
+    border: 2px solid var(--bs-yellow);
+    cursor: pointer;
+}
+
+
+.item-passed {
+    filter: none;
+}
+
+.item-inpassed {
+    filter: grayscale(100%);
+}
+
+.item-category:hover {
+    transform: scale(1.05);
+}

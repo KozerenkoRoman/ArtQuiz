@@ -1,0 +1,137 @@
+.article-picture {
+    background: none;
+    display: flex;
+    min-width: 70vw;
+    min-height: 90vh;
+}
+
+#progress {
+    width: 90%;
+    background-color: var(--bs-white);
+    height: 4px;
+}
+
+#bar {
+    width: 35%;
+    background-color: var(--bs-yellow);
+}
+
+.picture-timer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picture-question {
+    display: flex;
+    justify-content: center;
+}
+
+.picture-icon {
+    margin: 0.5em 0;
+}
+
+.picture-img-fit {
+    display: flex;
+    height: 58vh;
+    justify-content: center;
+}
+
+.picture-img {
+    background-size: cover;
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px #000;
+    position: relative;
+    width: 60vh;
+    height: 55vh;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.picture-img:hover {
+    transform: scale(1.01);
+}
+
+.download-icon {
+    opacity: 0.2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    background-size: 48px 48px;
+    background-image: url("../assets/svg/download.svg");
+}
+
+.download-icon:hover {
+    opacity: 1;
+}
+
+.picture-pagination {
+    display: flex;
+    min-width: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.pagination-item {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: var(--col-default);
+}
+
+.item-default {
+    background-color: var(--col-default);
+}
+
+.item-correct {
+    background-color: var(--col-correct);
+}
+
+.item-wrong {
+    background-color: var(--col-wrong);
+}
+
+
+.picture-answers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin: 0.2em;
+}
+
+.btn-answer {
+    margin: 5px;
+    width: 95%;
+    font-size: 0.9em;
+}
+
+@media (max-device-width: 1024px) {
+
+}
+
+@media (max-device-width: 768px) {
+    .picture-img {
+        width: 100%;
+        height: 55vh;
+    }
+}
+
+@media (max-device-width: 520px) {
+    .picture-img {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .btn-answer {
+        margin: 1px;
+        width: 95%;
+        font-size: 0.8em;
+    }
+}

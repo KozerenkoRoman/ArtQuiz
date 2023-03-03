@@ -1,0 +1,167 @@
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: black;
+}
+
+.modal-content {
+    display: flex;
+    background-color: white;
+    margin: 10% auto;
+    padding: 1em;
+    border-radius: 25px;
+    width: 40vw;
+    min-height: 35vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.txt-message {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.txt-message-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small-txt-message {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-items: start;
+    margin: 0.2em;
+    align-content: center;
+    grid-column-gap: 25px;
+}
+
+.small-txt-desc {
+    font-weight: 200;
+    margin-left: 0.2em;
+}
+
+.small-message-img {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.small-img {
+    border-radius: 25px;
+    width: 15vw;
+    height: 15vw;
+    transition: 0.5s;
+    background: top/cover no-repeat;
+}
+
+.small-img:hover {
+    transform: scale(1.05);
+}
+
+.btn-message {
+    margin: 1px;
+    width: 95%;
+    font-size: 0.9em;
+    color: black;
+}
+
+.btn-message:hover {
+    color: black;
+}
+
+.shimmer {
+    color: grey;
+    display: inline-block;
+    -webkit-mask: linear-gradient(-50deg, #000 30%, #0005, #000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 2.5s infinite;
+    font-size: 50px;
+    max-width: 200px;
+}
+
+.cup-champion {
+    background: url(../assets/svg/cup-champion.svg) no-repeat center;
+    min-height: 15vh;
+    min-width: 15vw;
+}
+
+.stars-champion {
+    background: url(../assets/svg/stars.svg) no-repeat center;
+    min-height: 15vh;
+    min-width: 15vw;
+}
+
+.cup-broken {
+    background: url(../assets/svg/cup-broken.svg) no-repeat center;
+    min-height: 15vh;
+    min-width: 15vw;
+}
+
+
+@keyframes shimmer {
+    100% {
+        -webkit-mask-position: left
+    }
+}
+
+@media (max-device-width: 1024px) {
+    .modal-content {
+        min-height: 220px;
+        width: 70vw;
+    }
+}
+
+@media (max-device-width: 768px) {
+    .small-message-img {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .small-txt-desc {
+        margin-left: 15px;
+    }
+
+    .modal-content {
+        min-height: 180px;
+        width: 80vw;
+    }
+
+    .small-img {
+        border-radius: 15px;
+        height: 100%;
+        width: auto;
+    }
+}
+
+@media (max-device-width: 520px) {
+    .small-message-img {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .modal-content {
+        min-height: 180px;
+        width: 95vw;
+    }
+
+    .small-txt-desc {
+        margin-left: 15px;
+    }
+
+    .small-img {
+        border-radius: 15px;
+        height: 100%;
+        width: auto;
+    }
+}

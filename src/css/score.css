@@ -1,0 +1,126 @@
+.article-score {
+    display: contents;
+}
+
+.score-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3vw;
+}
+
+.score-item-container {
+    width: 13vw;
+    height: 13vw;
+}
+
+.score-item {
+    height: 100%;
+    margin-top: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    transition: 0.5s;
+    filter: grayscale(100%);
+    border: 2px solid var(--bs-yellow);
+    cursor: pointer;
+}
+
+.item-passed {
+    filter: none;
+}
+
+.score-item:hover {
+    transform: scale(1.05);
+}
+
+.score-icon {
+    height: 36px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: relative;
+    top: 2.5vw;
+}
+
+.gl-score-container {
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gl-score-header {
+    color: var(--bs-yellow);
+    font-weight: 600;
+}
+
+.gl-score-user {
+    font-weight: 400;
+}
+
+.gl-score-score {
+    font-weight: 300;
+}
+
+@media (max-device-width: 1024px) {
+    .score-item-container {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .score-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3vw;
+    }
+
+    .score-icon {
+        top: 3.5vw;
+        background-size: 30px 30px;
+    }
+    .gl-score-container {
+        width: 75%;
+    }
+}
+
+@media (max-device-width: 768px) {
+    .score-item-container {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .score-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3vw;
+    }
+
+    .score-icon {
+        top: 5vw;
+        background-size: 25px 25px;
+    }
+    .gl-score-container {
+        width: 85%;
+    }
+}
+
+@media (max-device-width: 520px) {
+    .score-item-container {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .score-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 6vw;
+    }
+
+    .score-icon {
+        top: 8vw;
+        background-size: 30px 30px;
+    }
+
+    .gl-score-container {
+        width: 95%;
+    }
+}
+
