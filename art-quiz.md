@@ -11,4 +11,6 @@ https://fonts.google.com/icons
 
 webpack serve
 
+npx webpack
+
 eslint **/*.js
